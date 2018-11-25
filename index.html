@@ -13,7 +13,12 @@
 		<label for="decoded">Decoded</label>
 		<textarea name="decoded" id="decoded" cols="30" rows="10" readonly="true"></textarea>
 		<button id="morse-button">MORSE</button>
+		<span>
+			<input id="sound-enabled" name="sound-enabled" type="checkbox">
+			<label for="sound-enabled">Enable Sound</label>
+		</span>
 	</div>
+	<audio id="beep-sound" src="beep.mp3" loop="true"></audio>
 	<script src="main.js"></script>
 </body>
 </html>

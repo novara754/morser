@@ -17,10 +17,6 @@ h1 {
 	margin: auto;
 }
 
-#container > * {
-	display: block !important;
-}
-
 #container > label {
 	font-size: 1.5rem;
 	margin-top: 20px;
@@ -28,6 +24,10 @@ h1 {
 
 #container > textarea {
 	resize: none;
+}
+
+span {
+	display: inline;
 }
 
 #morse-button {

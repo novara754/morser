@@ -1,6 +1,8 @@
 const morseCodeInput = document.getElementById('morse-code');
 const decodedInput = document.getElementById('decoded');
 const morseButton = document.getElementById('morse-button');
+const beepSound = document.getElementById('beep-sound');
+const soundEnabled = document.getElementById('sound-enabled');
 const morseCodeTable = {
 	'.----': '1',
 	'..---': '2',
@@ -59,6 +61,10 @@ morseCodeInput.addEventListener('input', () => {
 });
 
 function down() {
+	if (soundEnabled.checked) {
+		beepSound.play();
+	}
+
 	if (!lastPress) {
 		lastPress = Date.now();
 		clearTimeout(enterSpaceTimeout);
@@ -66,6 +72,11 @@ function down() {
 }
 
 function up() {
+	if (soundEnabled.checked) {
+		beepSound.pause();
+		beepSound.currentTime = 0;
+	}
+
 	const length = Date.now() - lastPress;
 	if (length > 150) {
 		morseCodeInput.value += '-';
