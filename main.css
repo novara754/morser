@@ -1,0 +1,51 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #93BBDE;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+#container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 60%;
+	max-width: 570px;
+	margin: auto;
+}
+
+#container > * {
+	display: block !important;
+}
+
+#container > label {
+	font-size: 1.5rem;
+	margin-top: 20px;
+}
+
+#container > textarea {
+	resize: none;
+}
+
+#morse-button {
+	font-size: 1.5rem;
+	background-color: #93BBDE;
+	color: white;
+	margin: 20px auto 0;
+	border: none;
+	border-radius: 5px;
+	width: 250px;
+	height: 60px;
+	cursor: pointer;
+}
+
+#morse-button:focus {
+	outline: none;
+}
+
+#morse-button:active {
+	background-color: #86AACA;
+}
